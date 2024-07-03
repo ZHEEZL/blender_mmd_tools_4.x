@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# WARNING: This is a software crutch))
 # Copyright 2012 MMD Tools authors
 # This file is part of MMD Tools.
 
@@ -14,10 +15,23 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
+bl_info = {
+    "name": "mmd_tools",
+    "author": "sugiany",
+    "version": (2, 10, 4),
+    "blender": (2, 93, 0),
+    "location": "View3D > Sidebar > MMD Tools Panel",
+    "description": "Utility tools for MMD model editing. (UuuNyaa's forked version)",
+    "warning": "",
+    "doc_url": "https://mmd-blender.fandom.com/wiki/MMD_Tools",
+    "wiki_url": "https://mmd-blender.fandom.com/wiki/MMD_Tools",
+    "tracker_url": "https://github.com/UuuNyaa/blender_mmd_tools/issues",
+    "category": "Object",
+}
 
 import os
 
-PACKAGE_NAME = __package__
+PACKAGE_NAME = bl_info['name']
 PACKAGE_PATH = os.path.dirname(__file__)
 
 with open(os.path.join(PACKAGE_PATH, "blender_manifest.toml"), "rb") as f:
